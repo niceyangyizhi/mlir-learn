@@ -184,7 +184,7 @@ class ConstantOp : public mlir::Op<
 void ToyDialect::initialize() {
   addOperations<ConstantOp>();
 }
-``` ¶
+```
 
 在MLIR中，跟操作相关的类有两个：`Operation`和`Op`，`Operation`描述了所有操作的通用行为，`Op`则表述了一个操作的特殊行为。在上面中我们通过继承`Op`定义了ConstantOp这一特别的操作。给出一个`Operation*`实例，我们可以把它转换成特定类型的`Op`，例如：
 
